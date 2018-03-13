@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--directive to auto bootstrap angular app-->
+<!--angular is considered only within this node and its children-->
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</head>
+<body ng-init="hourOfday = 18">
+<!--angular variable initilization directive-->
+
+<!--angular conditional directive-->
+<!--if the condition is evaluated to true the element is added to the dom tree, otherwise not being added-->
+    <p ng-if="hourOfday < 12">Morning</p>
+    <p ng-if="hourOfday > 17">Evening</p>
+
+<!--variable created in one directive is used inside another directive-->
+<!--this is by sharing the same space called scope-->
+<!--these can be think of as properties of the object called scope-->
+
+<!--using ng-bind directive or with {{ }} we can display a variable value within a html element-->
+    <p>The value of the variable is (using ng-bind) : <span ng-bind="hourOfday"></span></p>
+    <p>The value of the variable is (using double curly-braces) : {{hourOfday}}</p>
+</body>
+</html>
