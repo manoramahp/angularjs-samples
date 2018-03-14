@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <p ng-controller="ctrl1 as c1"> {{ c1.prop1 }} </p>
+    <p ng-controller="ctrl2 as c2"> {{ c2.prop1 }} </p>
+
+    <script>
+        var module = angular.module("myApp", []);
+        module.controller("ctrl1", funcCtrl1);
+        module.controller("ctrl2", funcCtrl2);
+
+        <!--no need to pass $scope as a argument, instead set properties to 'this'-->
+        function funcCtrl1() {
+            this.prop1 = "Property of controller 1";
+        }
+
+        function funcCtrl2() {
+            this.prop1 = "Property of controller 2";
+        }
+    </script>
+
+</body>
+</html>
