@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<!--Tell angular which module to look up for the controller-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</head>
+<body>
+
+    <!--controller function is executing before rendering this element-->
+    <p ng-controller="mainCtrl"></p>
+
+<!--ng-controller directive is used in an element to call some javascript function before rendering that html element-->
+<!--before using the function in ng-controller, we should register it -->
+
+<!--Angular module is where we register the angular controllers. It's like a phonebook-->
+
+    <script>
+        <!--Angular has the global object called 'angular'-->
+
+        <!--module(name, empty-array)-->
+        var module = angular.module("myApp", []);
+
+        <!--controller(name, javascript function)-->
+        module.controller("mainCtrl", Main);
+
+        function Main() {
+            console.log("Main function executed");
+        }
+    </script>
+</body>
+</html>
