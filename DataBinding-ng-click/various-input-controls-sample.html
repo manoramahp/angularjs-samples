@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</head>
+<body ng-app>
+    <p><span>Text input: </span><input type="text" ng-model="textInput"></p>
+    <p><span>date input: </span><input type="date" ng-model="dateInput"></p>
+    <p><span>Check box: </span><input type="checkbox" ng-model="checkBoxInput"/></p>
+    <p><span>Radio button: <br/>
+        <input type="radio" ng-model="radioInput" value="radio value 1"/>
+        <input type="radio" ng-model="radioInput" value="radio value 2"/>
+        <input type="radio" ng-model="radioInput" value="radio value 3"/>
+    </span></p>
+
+    <p>This is text input: {{ textInput }}</p>
+    <p>This is date input: {{ dateInput }}</p>
+    <p>This is check box value: {{ checkBoxInput }}</p>
+    <p>This is radio button value: {{ radioInput }}</p>
+</body>
+</html>
