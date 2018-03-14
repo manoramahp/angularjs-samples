@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="calc.js"></script>
+</head>
+<body ng-app="calcApp">
+    <div ng-controller="calcCtrl as c1">
+        <div>
+            <input type="text" ng-model="c1.input1"/>
+            <span ng-bind="c1.operator"></span>
+            <input type="text" ng-model="c1.input2"/>
+            <button value="=" ng-click="c1.calculate()">=</button>
+            <span ng-bind="c1.result"></span>
+        </div>
+        <div>
+            <button ng-click="c1.showOperator('+')">+</button>
+            <button ng-click="c1.showOperator('-')">-</button>
+            <button ng-click="c1.showOperator('*')">*</button>
+            <button ng-click="c1.showOperator('/')">/</button>
+        </div>
+    </div>
+</body>
+</html>
