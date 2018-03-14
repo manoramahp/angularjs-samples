@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+
+    <p>Hour of day is : {{hourOfday}}</p>
+
+    <script>
+
+        var module = angular.module("myApp", []);
+        module.controller("MainCtrl", Main);
+
+        <!--Here we've passed 'the scope' object, defined by $scope to the function and set the variable in that object-->
+        <!--So we can retrieve it where ng-controller is used-->
+        function Main($scope) {
+            $scope.hourOfday = 18;
+        }
+    </script>
+</body>
+</html>
