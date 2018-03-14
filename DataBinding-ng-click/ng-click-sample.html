@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <h1>Clock app with button</h1>
+    <div ng-controller="timeCtrl">
+        <p>Time now is : {{ currentTime }} </p>
+
+        <button ng-click="refreshTime()">Refresh</button>
+    </div>
+</body>
+</html>
