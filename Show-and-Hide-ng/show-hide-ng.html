@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+</head>
+<body>
+    <input type="checkbox" ng-model="checkBoxSelected">
+    <!--ng-show and ng-hide will not remove the element from the dom-->
+    <!--instead it will apply the css class to make the element hidden-->
+    <!--but if we use ng-if, then it will remove the element from dom, if condition becomes false-->
+    <p ng-show="checkBoxSelected">Show when selected</p>
+    <p ng-hide="checkBoxSelected">Show when unselected</p>
+</body>
+</html>
