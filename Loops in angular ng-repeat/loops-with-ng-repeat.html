@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+    <script src="loop.js"></script>
+</head>
+<body ng-app="repeatApp">
+    <div ng-controller="repeatCtrl as c1">
+        <p ng-repeat="i in c1.myList">Hello {{ i }}</p>
+        <hr/>
+        <div ng-repeat="obj in c1.myObjList">
+            <p>Name : {{ obj.name }}</p>
+            <p>Age : {{ obj.age }}</p>
+            <hr/>
+        </div>
+    </div>
+</body>
+</html>
