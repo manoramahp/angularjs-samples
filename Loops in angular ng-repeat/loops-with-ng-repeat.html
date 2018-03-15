@@ -11,6 +11,8 @@
         <p ng-repeat="i in c1.myList">Hello {{ i }}</p>
         <hr/>
         <div ng-repeat="obj in c1.myObjList">
+            <p><b>$index scope variable in ng-repeat: {{ $index }}</b></p>
+            <p><i>$first scope variable in ng-repeat: {{ $first }}</i></p> 
             <p>Name : {{ obj.name }}</p>
             <p>Age : {{ obj.age }}</p>
             <hr/>
